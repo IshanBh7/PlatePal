@@ -23,7 +23,6 @@ npm start
 Access PlatePal at `http://localhost:3000` to:
 
 - Browse and search recipes by category, cuisine, or ingredients.
-- View detailed recipe instructions, including ingredients and cooking steps.
 - Create an account to save favorite recipes and create a personalized collection.
 - Share recipes with the community by uploading them with photos and details.
 
