@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 5000
+const port = process.env.PORT||5000;
 const mongoDB= require("./db")
 
 app.get('/', (req, res) => {
@@ -23,3 +23,15 @@ app.use('/api', require("./Routes/OrderData"));
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+if (process.env.NODE_ENV === "production") {
+  app.use("/", express.static("build"));
+  app.use('/static', express.static(path.join(__dirname, 'public')))
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client/build/index.html"));
+    
+   app.use(express.static('public'));
+    app.use('/images', express.static('images'));
+  });
+}
