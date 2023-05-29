@@ -3,7 +3,7 @@ const app = express()
 const port = process.env.PORT||5000;
 const mongoDB= require("./db")
 const path= require("path");
-
+require("dotenv").config();
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
@@ -21,9 +21,7 @@ app.use('/api', require("./Routes/CreateUser"));
 app.use('/api', require("./Routes/DisplayData"));
 app.use('/api', require("./Routes/OrderData"));
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+
 
 if (process.env.NODE_ENV === "production") {
   app.use("/", express.static("build"));
@@ -34,3 +32,6 @@ if (process.env.NODE_ENV === "production") {
     
 }
 
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
