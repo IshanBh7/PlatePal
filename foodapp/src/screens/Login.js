@@ -9,7 +9,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    const response = await fetch("plate-pal-99tg-fgqu257v7-ishanbh7.vercel.app/api/loginuser", {
+    const response = await fetch("http://localhost:5000/api/loginuser", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

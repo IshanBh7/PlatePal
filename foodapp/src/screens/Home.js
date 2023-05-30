@@ -8,7 +8,7 @@ export default function Home() {
     const [foodItem, setFoodItem] = useState([]);
 
     const loadData = async () => {
-        let response = await fetch("plate-pal-99tg-fgqu257v7-ishanbh7.vercel.app/api/foodData", {
+        let response = await fetch("http://localhost:5000/api/foodData", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
