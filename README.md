@@ -1,4 +1,6 @@
 # PlatePal
+## Demo video link
+https://clipchamp.com/watch/FyxG1Tkc6iw
 
 PlatePal is a web application that allows users to discover and share recipes from around the world.
 
